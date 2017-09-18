@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'v1/mail'], function () {
+    Route::post(
+        '/order',
+        ['uses' => '\App\Http\Controllers\V1\MailController@sendOrderMail']
+    );
+});
