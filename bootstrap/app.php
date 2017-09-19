@@ -60,7 +60,7 @@ $app->configureMonologUsing(function (\Monolog\Logger $monolog) use ($app) {
     //     $this->applicationName()
     // ));
 
-    $socketHandler->setFormatter(new \Monolog\Formatter\LogstashFormatter('sms-v1'));
+    $socketHandler->setFormatter(new \Monolog\Formatter\LogstashFormatter('mail-v1'));
 
     // Reconfigure rotating file handler
     $monolog->pushHandler(

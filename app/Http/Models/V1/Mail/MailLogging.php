@@ -16,11 +16,10 @@ class MailLogging implements MailLoggingInterface
      * Log the response from Mail Service
      *
      * @access public
-     * @param  string  $uId (can be uuid)
-     * @param  orderId $orderId (can be uuid)
+     * @param  array $details
      * @param  array   $data
      */
-    public function log($uId, $orderId, $response)
+    public function log($details, $response)
     {
         /*
          * @todo: Log the response from the Mail Service.

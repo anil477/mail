@@ -27,7 +27,8 @@ class OrderRepo
             'delivery_address'  => 'Banaglore',
             'expected_delivery' => '29 September, 2017',
             'product_name'      => 'Iphone X',
-            'invoice_path'      => null
+            'invoice_path'      => null,
+            'order_id'          => '99812abd'
         ]);
 
         /*
@@ -37,7 +38,7 @@ class OrderRepo
         return $this->dbManager->table(self::ORDERS_TABLE)
                     ->where('u_id', $uID)
                     ->where('order_id', $orderId)
-                    ->select('delivery_address', 'expected_delivery', 'product_name', 'invoice_path')
+                    ->select('delivery_address', 'expected_delivery', 'product_name', 'invoice_path', 'order_id')
                     ->first();
     }
 }

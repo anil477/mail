@@ -5,11 +5,11 @@ namespace App\Repositories\V1\Mail;
 interface MailLoggingInterface
 {
     /**
-     * Log the response from Mail Sending Service
+     * Log the response from Mail Service
      *
-     * @param  string  $uId (can be uuid)
-     * @param  orderId $orderId (can be uuid)
+     * @access public
+     * @param  array $details
      * @param  array   $data
      */
-    public function log($uId, $orderId, $response);
+    public function log($details, $response);
 }

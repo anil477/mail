@@ -28,13 +28,14 @@ class UserRepo
         return collect([
             'name'            => 'Karan Dev',
             'billing_address' => 'Banaglore',
-            'email'           => 'dev@dev.net'
+            'email'           => 'dev@dev.net',
+            'u_id'            => 'uuid-122'
         ]);
 
         // this will return a collection with the user details
         return $this->dbManager->table(self::USER_TABLE)
                     ->where('user_id', $uID)
-                    ->select('billing_address', 'name', 'email')
+                    ->select('billing_address', 'name', 'email', 'u_id')
                     ->first();
     }
 }
